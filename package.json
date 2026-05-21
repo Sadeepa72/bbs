@@ -1,0 +1,19 @@
+{
+  "name": "beverage-billing-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beverage Distribution Billing System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^12.0.0"
+  }
+}

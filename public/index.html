@@ -1,0 +1,127 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beverage Billing Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🍹 <span>Beverage Billing Panel</span></h1>
+      </header>
+
+      <!--div class="top-btn">
+        <button id="themeToggle" class="theme-btn">🌙</button>
+        <button id="logoutBtn" class="Logout-btn">🚪 Logout</button>
+      </div-->
+
+      <div class="top-btn">
+          <div class="left-box">
+              <button id="themeToggle" class="theme-btn">🌙</button>
+              <span id="loginUser" class="login-user"></span>
+          </div>
+
+          <button id="logoutBtn" class="Logout-btn">🚪 Logout</button>
+      </div>
+
+      <div class="OrderNo">
+        <strong>Order No: </strong> <span id="orderNoDisplay">Loading...</span>
+      </div>
+
+      <div class="section">
+        <label for="customerSelect">Customer</label>
+        <div class="customer-select-box">
+          <input type="text" id="customerSearch" placeholder="Search customer..." autocomplete="off">
+          <div id="customerList" class="dropdown hidden"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Products</h2>
+        <div id="productsGrid" class="products-grid"></div>
+      </div>
+
+      <div class="section">
+        <h2>Billing</h2>
+        <input type="number" id="packInput" placeholder="Pack size" />
+        <input type="number" id="qtyInput" placeholder="Quantity" />
+
+        <div class="button-group">
+          <button id="getBtn">➕ Get</button>
+          <button id="addFreeBtn" class="free">🎁 Add Free</button>
+          <button id="addReturnBtn" class="return">↩ Return</button>
+        </div>
+
+        <!-- Discount Section -->
+        <div class="input-section">
+          <label for="discountPercent">Discount (%)</label>
+          <input type="number" id="discountPercent" placeholder="Enter discount %" min="0" max="100" />
+          <label for="discountAmount">Discount Amount (Rs)</label>
+          <input type="number" id="discountAmount" placeholder="Enter discount amount" min="0" />
+        </div>
+
+        <button id="saveBtn" class="save">💾 Save</button>
+
+        <!-- Items Display Tables -->
+        <div class="items-display">
+          <table id="billingTable" class="hidden">
+            <caption>Billing Items</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Pack</th>
+                <th>Qty</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <table id="freeTable" class="hidden">
+            <caption>Free Items</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Pack</th>
+                <th>Qty</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <table id="returnTable" class="hidden">
+            <caption>Return Items</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Pack</th>
+                <th>Qty</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <!-- Totals Section -->
+        <div id="totalsSection" class="totals">
+          <p><strong>Billing Total:</strong> Rs.<span id="billingTotal">0.00</span></p>
+          <p><strong>Return Total:</strong> Rs.<span id="returnTotal">0.00</span></p>
+          <p><strong>Discount:</strong> Rs.<span id="discountDisplay">0.00</span></p>
+          <p><strong>Net Total:</strong> Rs.<span id="netTotal">0.00</span></p>
+        </div>
+      </div>
+
+      <div id="summary" class="hidden section">
+        <h3>✅ Order Saved</h3>
+        <pre id="orderJson"></pre>
+        <button id="newBtn">🆕 New Order</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
